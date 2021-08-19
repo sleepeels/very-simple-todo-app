@@ -1,5 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
 }
 
 .App-logo {
@@ -35,4 +45,54 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.todo {
+  display: flex;
+  /* align-items: center; */
+  min-width: 250px;
+  justify-content: space-between;
+}
+
+.todo-item {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.delete-item {
+  color: rgba(223, 93, 93, 0.699);
+  border: none;
+  background-color: transparent;
+  margin: 0.3rem;
+}
+.delete-item:hover {
+  color: rgba(219, 28, 28, 0.699);
+}
+.complete-item {
+  color: rgba(37, 189, 23, 0.699);
+  border: none;
+  background-color: transparent;
+  margin: 0.3rem;
+}
+.complete-item:hover {
+  color: rgba(16, 136, 5, 0.699);
+}
+
+.list-container {
+  max-width: 70vh;
+  margin: 0 auto;
+  /* transition: all 0.5; */
+  /* background: rgb(2, 0, 36);
+  background: linear-gradient(
+    105deg,
+    rgb(34, 20, 224) 0%,
+    rgba(79, 79, 193, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  ); */
+}
+
+.finished {
+  text-decoration: line-through;
+  opacity: 0.6;
 }
